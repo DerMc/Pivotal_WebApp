@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+     ViewData["Title"] = "Office Local Times";
+}
+
+@*<h2>@ViewData["Title"]</h2>
+    <h3>@Model.Message</h3>
+           <h3>@Model.Message</h3>
+
+       <p>Use this area to provide home information.</p>*@
+
+<h1>Office Locations</h1>
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var the_office in Model.All_regions)
+            {
+                <tr>
+                    <td>@the_office.location</td>
+                    <td>@the_office.local_time_localised</td>
+                    <td>@the_office.status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+

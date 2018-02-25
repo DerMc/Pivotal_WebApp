@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Globalization;
+using System.Collections;
+
+namespace Pivotal_WebApp
+{
+    
+    public class Pivotal_Time_Regions
+    {
+        public string GetPivotal_Time_Regions()
+        {
+
+            DateTime localDate = DateTime.Now;
+            String row_info, message = "";
+
+            List<my_region> region_list = new List<my_region>();
+
+            region_list.Add(new my_region("San Francisco", "en-US", -8));
+            region_list.Add(new my_region("New York", "en-US", -5));
+            region_list.Add(new my_region("London", "en-GB", 0));
+            region_list.Add(new my_region("Singapore", "en-SG", +8));
+
+            message =  String.Format("Current Time in Pivotal Offices{0} _______________________________________ {0}{0}", Environment.NewLine);
+
+            // foreach (var cultureName in cultureNames)
+            foreach (my_region my_r in region_list)
+            {
+                // var culture = new CultureInfo(cultureName);
+
+                row_info = string.Format("{0,-20} | {1,-30} | {2, -15}", my_r.location, my_r.local_time_localised, my_r.status);
+
+                message = message + row_info + Environment.NewLine;
+
+            }
+
+            message = "Hello there!";
+            return message;
+        }
+    }
+
+
+    struct my_region
+    {
+        public string location;
+        public string culture;
+        public String local_time_localised;
+        public string status;
+
+        public my_region(string loc, string cul, int adj)
+        {
+            DateTime region_local_time = DateTime.Now.AddHours(adj);
+
+            this.location = loc;
+            this.culture = cul;
+            this.local_time_localised = region_local_time.ToString(new CultureInfo(cul));
+
+            this.status = "Unknown";
+
+            if (region_local_time.Hour >= 9 && region_local_time.Hour < 18)
+            {
+                this.status = "Office Open";
+            }
+            else
+            {
+                this.status = "* Outside working hours *";
+            }
+
+        }
+    };
+
+
+}
