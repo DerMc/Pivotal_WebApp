@@ -23,8 +23,8 @@ namespace Pivotal_WebApp.Pages
             region_list_populated.Add(new my_region("San Francisco", "en-US", -8));
             region_list_populated.Add(new my_region("New York", "en-US", -5));
             region_list_populated.Add(new my_region("London", "en-GB", 0));
-            region_list_populated.Add(new my_region("Dublin", "en-GB", 0));
-            region_list_populated.Add(new my_region("Singapore", "en-SG", +8));
+            // region_list_populated.Add(new my_region("Dublin", "en-GB", 0));
+            // region_list_populated.Add(new my_region("Singapore", "en-SG", +8));
 
             return region_list_populated;
         }
