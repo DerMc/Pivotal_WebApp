@@ -26,6 +26,31 @@ namespace Pivotal_WebApp.Pages
             region_list_populated.Add(new my_region("Dublin", "en-GB", 0));
             region_list_populated.Add(new my_region("Singapore", "en-SG", +8));
 
+            region_list_populated.Add(new my_region("Atlanta", "en-US", -5));
+            region_list_populated.Add(new my_region("Beaverton", "en-US", -8));
+            region_list_populated.Add(new my_region("Boulder", "en-US", -7));
+            region_list_populated.Add(new my_region("Cambridge", "en-US", -5));
+            region_list_populated.Add(new my_region("Chicago", "en-US", -6));
+            region_list_populated.Add(new my_region("Dallas", "en-US", -6));
+            region_list_populated.Add(new my_region("Denver", "en-US", -7));
+            region_list_populated.Add(new my_region("Los Angeles", "en-US", -8));
+            region_list_populated.Add(new my_region("Palo Alto", "en-US", -8));
+            region_list_populated.Add(new my_region("Raleigh", "en-US", -5));
+            region_list_populated.Add(new my_region("San Francisco", "en-US", -8));
+            region_list_populated.Add(new my_region("São Paulo", "pt-BR", -3));
+            region_list_populated.Add(new my_region("Seattle", "en-US", -8));
+            region_list_populated.Add(new my_region("Toronto", "en-CA", -8));
+            region_list_populated.Add(new my_region("Washington D.C.", "en-US", -5));
+            region_list_populated.Add(new my_region("Cork", "en-GB", 0));
+            region_list_populated.Add(new my_region("Berlin", "de-DE", +1));
+            region_list_populated.Add(new my_region("Paris", "fr-FR", +1));
+            region_list_populated.Add(new my_region("Beijing", "zh-CN", +8));
+            region_list_populated.Add(new my_region("Shanghai", "zh-CN", +8));
+            region_list_populated.Add(new my_region("Seoul", "ko-KR", +9));
+            region_list_populated.Add(new my_region("Sydney", "en-AU", +11));
+            region_list_populated.Add(new my_region("Tokyo", "ja-JP", +9));
+
+
             return region_list_populated;
         }
 
